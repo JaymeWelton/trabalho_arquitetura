@@ -24,6 +24,7 @@ int main(){
 
   //Começa a calcular o tempo daqui:
   inicio = clock();
+<<<<<<< HEAD
   for(int k = 0; k < 100; k++)
     for(int i = 0; i < n; i++){
       for(int j = 0; j < n; j++){
@@ -39,6 +40,21 @@ int main(){
         matrizResultado[i][j] = matrizA[j][i] * matrizB[j][i];
       }
     }
+=======
+  for(int i = 0; i < n; i++){
+    for(int j = 0; j < n; j++){
+      matrizResultado[i][j] = matrizA[i][j] * matrizB[i][j];
+    }
+  }
+  fim = clock();
+
+  inicio_trocado = clock();
+  for(int i = 0; i < n; i++){
+    for(int j = 0; j < n; j++){
+      matrizResultado[i][j] = matrizA[j][i] * matrizB[j][i];
+    }
+  }
+>>>>>>> 73f373704ac4cf284888e7df0f3d50c1a91cf901
   fim_trocado = clock();
 
   cout << "Tempo total: " << fim - inicio << "\n";
